@@ -1,0 +1,4 @@
+project_id = "ftjigraluaibmkvpbdxl"
+
+[functions.send-scope-request]
+verify_jwt = false

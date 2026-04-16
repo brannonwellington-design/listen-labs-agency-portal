@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+@layer base {
+  :root {
+    /* ---------- Listen Labs · Paper (Light) ---------- */
+    --content-primary: #120F08;
+    --content-secondary: rgba(18, 15, 8, 0.6);
+    --content-inverse-primary: #F9F4EB;
+    --content-inverse-secondary: rgba(249, 244, 235, 0.6);
+    --content-disabled: rgba(18, 15, 8, 0.3);
+    --content-brand: #0021CC;
+    --content-brand-contrast: #F9F4EB;
+    --content-complimentary: #E5A119;
+    --content-warning: #CF6317;
+    --content-negative: #CF2617;
+    --content-positive: #0F8A38;
+
+    --surface-highlight: #FCFBF7;
+    --surface-primary: #F9F4EB;
+    --surface-secondary: #EEE8DD;
+    --surface-tertiary: #E2DCCF;
+    --surface-inverse-primary: #120F08;
+    --surface-inverse-secondary: #1F1B14;
+    --surface-brand-primary: #0021CC;
+    --surface-brand-secondary: rgba(0, 33, 204, 0.10);
+
+    /* ---------- shadcn aliases (HSL for Tailwind's hsl(var(--x)) pattern) ---------- */
+    /* Surface/paper */
+    --background: 38 54% 95%;            /* #F9F4EB */
+    --foreground: 36 38% 5%;             /* #120F08 */
+    --card: 48 54% 98%;                  /* #FCFBF7 */
+    --card-foreground: 36 38% 5%;
+    --popover: 48 54% 98%;
+    --popover-foreground: 36 38% 5%;
+
+    /* Primary = brand blue */
+    --primary: 230 100% 40%;             /* #0021CC */
+    --primary-foreground: 38 54% 95%;    /* #F9F4EB */
+
+    /* Secondary / muted / accent = paper tones */
+    --secondary: 40 32% 90%;             /* #EEE8DD */
+    --secondary-foreground: 36 38% 5%;
+    --muted: 40 32% 90%;
+    --muted-foreground: 36 38% 5% / 0.6; /* fallback: see content-secondary */
+    --accent: 40 32% 90%;
+    --accent-foreground: 36 38% 5%;
+
+    --destructive: 4 80% 45%;            /* #CF2617 */
+    --destructive-foreground: 38 54% 95%;
+
+    --border: 38 28% 86%;
+    --input: 38 28% 86%;
+    --ring: 230 100% 40%;
+
+    --radius: 8px;
+
+    --sidebar-background: 38 54% 95%;
+    --sidebar-foreground: 36 38% 5%;
+    --sidebar-primary: 230 100% 40%;
+    --sidebar-primary-foreground: 38 54% 95%;
+    --sidebar-accent: 40 32% 90%;
+    --sidebar-accent-foreground: 36 38% 5%;
+    --sidebar-border: 38 28% 86%;
+    --sidebar-ring: 230 100% 40%;
+  }
+
+  .dark {
+    --content-primary: #F9F4EB;
+    --content-secondary: rgba(249, 244, 235, 0.6);
+    --content-inverse-primary: #120F08;
+    --content-inverse-secondary: rgba(18, 15, 8, 0.6);
+    --content-disabled: rgba(249, 244, 235, 0.3);
+
+    --surface-highlight: #080603;
+    --surface-primary: #130F06;
+    --surface-secondary: #201C13;
+    --surface-tertiary: #30291D;
+    --surface-inverse-primary: #F9F4EB;
+    --surface-inverse-secondary: #F0E9DB;
+
+    --background: 36 44% 5%;             /* #130F06 */
+    --foreground: 38 54% 95%;
+    --card: 30 27% 7%;                   /* #201C13 */
+    --card-foreground: 38 54% 95%;
+    --popover: 30 27% 7%;
+    --popover-foreground: 38 54% 95%;
+
+    --primary: 230 100% 40%;
+    --primary-foreground: 38 54% 95%;
+
+    --secondary: 33 24% 14%;             /* #30291D */
+    --secondary-foreground: 38 54% 95%;
+    --muted: 33 24% 14%;
+    --muted-foreground: 38 54% 95% / 0.6;
+    --accent: 33 24% 14%;
+    --accent-foreground: 38 54% 95%;
+
+    --destructive: 4 80% 45%;
+    --destructive-foreground: 38 54% 95%;
+
+    --border: 33 18% 18%;
+    --input: 33 18% 18%;
+    --ring: 230 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    /* never set letter-spacing */
+  }
+
+  body {
+    background-color: var(--surface-primary);
+    color: var(--content-primary);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Per brand: Inter Regular 400 only. Never bold. */
+  h1, h2, h3, h4, h5, h6,
+  strong, b {
+    font-weight: 400;
+  }
+}
+
+/* Utility: brand text/surface classes for components that bypass shadcn tokens */
+.text-content-primary { color: var(--content-primary); }
+.text-content-secondary { color: var(--content-secondary); }
+.text-content-brand { color: var(--content-brand); }
+.text-content-inverse-primary { color: var(--content-inverse-primary); }
+.text-content-inverse-secondary { color: var(--content-inverse-secondary); }
+
+.bg-surface-primary { background-color: var(--surface-primary); }
+.bg-surface-highlight { background-color: var(--surface-highlight); }
+.bg-surface-secondary { background-color: var(--surface-secondary); }
+.bg-surface-tertiary { background-color: var(--surface-tertiary); }
+.bg-surface-inverse-primary { background-color: var(--surface-inverse-primary); }
+.bg-surface-brand-primary { background-color: var(--surface-brand-primary); }
+.bg-surface-brand-secondary { background-color: var(--surface-brand-secondary); }
+
+.border-content-primary { border-color: var(--content-primary); }
+.border-content-secondary { border-color: var(--content-secondary); }
+.border-brand { border-color: var(--content-brand); }

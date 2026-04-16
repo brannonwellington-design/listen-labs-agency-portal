@@ -1,0 +1,224 @@
+import NavBar from "@/components/NavBar";
+import FooterSection from "@/components/FooterSection";
+import PageHeader from "@/components/PageHeader";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Check } from "lucide-react";
+
+const creditTiers = [
+  { label: "Self-Recruited (agency sources respondents)", priceLine1: "$15 per respondent", priceLine2: "2 credits per respondent" },
+  { label: "Listen Consumer Panel, 20%+ incidence rate", priceLine1: "$37.50 per respondent", priceLine2: "5 credits per respondent" },
+  { label: "Listen Consumer Panel, 5–20% incidence rate", priceLine1: "$60 per respondent", priceLine2: "8 credits per respondent" },
+  { label: "Listen B2B / Specialist (complex or low-incidence audiences)", priceLine1: "On request", priceLine2: "" },
+];
+
+const canRecruit = [
+  "Geographies: US, UK, EU, CA, and APAC markets",
+  "Consumer audiences: e.g. general population, category users, brand buyers",
+  "B2B audiences: e.g. job titles, seniority levels, industries",
+  "90+ languages supported",
+];
+
+const customQuote = [
+  "Low-incidence or hard-to-reach audiences",
+  "Specialist / clinical / professional audiences",
+];
+
+const faqs = [
+  { q: "What constitutes a 'project'?", a: "A project is a single study with one brief, one respondent pool, and one set of deliverables. Multiple waves of the same study count as separate projects." },
+  { q: "What constitutes a 'completed response'?", a: "A completed response is a respondent who finishes the full interview flow, passes Quality Guard checks, and whose transcript is available in your dashboard." },
+  { q: "How quickly can a study turn around?", a: "Consumer recruitment typically finishes in a few days. B2B/specialist may take longer. Setup, moderation, and analysis run in real time." },
+  { q: "Is the platform secure and compliant?", a: "Yes. Listen is compliant with SOC 2 Type 2, GDPR, HIPAA, ISO 27001, and ISO 42001. Full details at trust.listenlabs.ai" },
+  { q: "Are there volume discounts?", a: "Yes. Enterprise and high-volume pricing is available. Contact us for custom agency partnership rates." },
+  { q: "Will our clients accept AI moderation?", a: "Increasingly, they're the ones asking for it. Clients across tech, pharma, and financial services run Listen studies through their own review processes." },
+];
+
+const platformFeatures = [
+  "AI-moderated interviews at scale",
+  "Auto-generated decks & video reels",
+  "Live data interface for your clients",
+  "All languages · Unlimited team seats",
+  "SOC 2 · GDPR · HIPAA · ISO 27001",
+];
+
+// Reusable bordered container (no shadow, brand radius)
+const cardStyle = "border p-8 md:p-10 bg-surface-highlight";
+const cardBorder = { borderColor: "var(--surface-tertiary)", borderRadius: 12 };
+
+const Pricing = () => {
+  return (
+    <div className="min-h-screen bg-surface-primary">
+      <NavBar />
+      <PageHeader
+        label="Agency Pricing"
+        title="Pricing & feasibility."
+        description="Transparent, flexible pricing for research panels and agency partners."
+      />
+
+      {/* Two Components */}
+      <section className="py-20 bg-surface-primary">
+        <div className="container max-w-5xl">
+          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
+            Listen's pricing: two components.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Platform Access card */}
+            <div className={cardStyle} style={cardBorder}>
+              <p className="text-[12px] text-content-secondary mb-4">Platform Access</p>
+              <p className="text-[48px] leading-none text-content-primary mb-2">$5,000</p>
+              <p className="text-[14px] text-content-secondary mb-8">/ project</p>
+              <ul className="space-y-3 mb-8">
+                {platformFeatures.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-[14px] text-content-primary">
+                    <Check
+                      className="h-4 w-4 mt-[2px] shrink-0"
+                      strokeWidth={1.25}
+                      style={{ color: "var(--content-brand)" }}
+                    />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <div
+                className="px-5 py-4 border-l-2"
+                style={{
+                  backgroundColor: "var(--surface-brand-secondary)",
+                  borderColor: "var(--content-brand)",
+                }}
+              >
+                <p className="text-[14px] text-content-primary">
+                  Pilot rate: $1,000 / project for new agency partners
+                </p>
+              </div>
+            </div>
+
+            {/* Respondent Credits card */}
+            <div className={cardStyle} style={cardBorder}>
+              <p className="text-[12px] text-content-secondary mb-4">Respondent Credits</p>
+              <p className="text-[32px] leading-[1.1] text-content-primary mb-2">
+                Scales with your fieldwork.
+              </p>
+              <p className="text-[14px] text-content-secondary mb-8">
+                Charged per completed response. Pricing depends on who handles sourcing and audience type.
+              </p>
+              <ul>
+                {creditTiers.map((tier, i) => (
+                  <li
+                    key={i}
+                    className="grid grid-cols-12 gap-4 py-4 border-t text-[14px]"
+                    style={{
+                      borderColor: "var(--surface-tertiary)",
+                      borderBottomWidth: i === creditTiers.length - 1 ? 1 : 0,
+                    }}
+                  >
+                    <span className="col-span-7 text-content-secondary">{tier.label}</span>
+                    <span className="col-span-5 text-right">
+                      <span className="block text-content-primary">{tier.priceLine1}</span>
+                      {tier.priceLine2 && (
+                        <span className="block text-[12px] text-content-secondary mt-1">
+                          {tier.priceLine2}
+                        </span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-[12px] text-content-secondary mt-4">
+                Pricing shown is for US-only respondents.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Audience Feasibility */}
+      <section className="py-20 bg-surface-highlight">
+        <div className="container max-w-5xl">
+          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
+            Audience feasibility.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <p className="text-[12px] text-content-secondary mb-4">What Listen can recruit</p>
+              <ul className="space-y-3">
+                {canRecruit.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[14px] text-content-primary">
+                    <Check
+                      className="h-4 w-4 mt-[2px] shrink-0"
+                      strokeWidth={1.25}
+                      style={{ color: "var(--content-brand)" }}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-[12px] text-content-secondary mb-4">What requires a custom quote</p>
+              <ul className="space-y-3">
+                {customQuote.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[14px] text-content-primary">
+                    <Check className="h-4 w-4 mt-[2px] shrink-0 text-content-secondary" strokeWidth={1.25} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-20 bg-surface-primary">
+        <div className="container max-w-5xl">
+          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
+            Frequently asked questions.
+          </h2>
+          <Accordion type="single" collapsible>
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="border-t"
+                style={{
+                  borderColor: "var(--surface-tertiary)",
+                  borderBottomWidth: i === faqs.length - 1 ? 1 : 0,
+                }}
+              >
+                <AccordionTrigger className="text-content-primary text-[16px] py-5 hover:no-underline">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-content-secondary text-[14px] leading-[1.6] pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Pilots & Annual Plans */}
+      <section className="py-20 bg-surface-highlight">
+        <div className="container max-w-5xl">
+          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-6">
+            Pilots & annual plans.
+          </h2>
+          <p className="text-[16px] text-content-secondary leading-[1.6] max-w-3xl">
+            Agencies typically begin with one pilot project at the discounted platform rate. After
+            piloting, we encourage moving to an annual subscription structured around your anticipated
+            usage over the next 12 months — a bundle of projects and respondent credits sized to your
+            needs. Most agencies run their first project within a week of signing up.
+          </p>
+        </div>
+      </section>
+
+      <FooterSection />
+    </div>
+  );
+};
+
+export default Pricing;
