@@ -122,7 +122,7 @@ const UseCases = () => {
 
       {/* Use case list — editorial rows, no cards */}
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           {useCases.map((uc, i) => (
             <div
               key={i}
@@ -199,22 +199,40 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* Trusted by — even grid fills the full section width */}
-      <section className="py-16 bg-surface-highlight">
-        <div className="container max-w-5xl">
-          <p className="text-[12px] text-content-secondary mb-10">Trusted by</p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-y-10 gap-x-8 items-center">
-            {trustedBy.map((brand) => (
-              <div key={brand.name} className="flex items-center justify-center">
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className={`object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert ${
-                    brand.name === "Emerald Research Group" ? "h-14 md:h-16" : "h-10 md:h-12"
-                  }`}
-                />
+      {/* Trusted by — editorial split: display headline anchors the left,
+          logo grid lives on the right, inside a structural rule frame */}
+      <section className="py-24 bg-surface-highlight">
+        <div className="container">
+          <div
+            className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start pt-12 border-t"
+            style={{ borderColor: "var(--content-primary)" }}
+          >
+            <div className="md:col-span-5">
+              <p className="text-[12px] text-content-secondary mb-6">Trusted by</p>
+              <h2 className="text-[40px] md:text-[56px] leading-[1.02] tracking-[-0.02em] text-content-primary mb-6">
+                Brands your clients already know.
+              </h2>
+              <p className="text-[14px] text-content-secondary leading-[1.6] max-w-sm">
+                Listen powers research at Fortune 500 brands and the agencies they
+                partner with — spanning CPG, tech, financial services, and beyond.
+              </p>
+            </div>
+
+            <div className="md:col-span-7">
+              <div className="grid grid-cols-3 gap-y-14 gap-x-8 items-center">
+                {trustedBy.map((brand) => (
+                  <div key={brand.name} className="flex items-center justify-center">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className={`object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert ${
+                        brand.name === "Emerald Research Group" ? "h-14 md:h-16" : "h-10 md:h-12"
+                      }`}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

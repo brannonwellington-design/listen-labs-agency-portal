@@ -131,7 +131,7 @@ const HowToPitch = () => {
 
       {/* Value Proposition */}
       <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
+        <div className="container">
           <p className="text-[12px] text-content-secondary mb-8">The Value Proposition</p>
           <blockquote className="text-[28px] md:text-[40px] leading-[1.15] text-content-primary mb-8 max-w-4xl">
             <span className="text-content-brand">
@@ -149,7 +149,7 @@ const HowToPitch = () => {
 
       {/* Pitch steps */}
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             A pitch that actually works.
           </h2>
@@ -254,7 +254,7 @@ const HowToPitch = () => {
 
       {/* Key Benefits */}
       <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             Key benefits.
           </h2>
@@ -272,7 +272,7 @@ const HowToPitch = () => {
 
       {/* Standouts */}
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             Where Listen stands out.
           </h2>
@@ -303,7 +303,7 @@ const HowToPitch = () => {
 
       {/* Objections */}
       <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
+        <div className="container">
           <div className="flex items-center gap-3 mb-12">
             <MessageSquare className="h-6 w-6 text-content-brand" strokeWidth={2} />
             <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary">

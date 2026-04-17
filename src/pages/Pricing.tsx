@@ -61,7 +61,7 @@ const Pricing = () => {
 
       {/* Two Components */}
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             Listen's pricing: two components.
           </h2>
@@ -137,7 +137,7 @@ const Pricing = () => {
 
       {/* Audience Feasibility */}
       <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             Audience feasibility.
           </h2>
@@ -174,7 +174,7 @@ const Pricing = () => {
 
       {/* FAQs */}
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
             Frequently asked questions.
           </h2>
@@ -192,7 +192,7 @@ const Pricing = () => {
                 <AccordionTrigger className="text-content-primary text-[16px] py-5 hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-content-secondary text-[14px] leading-[1.6] pb-5">
+                <AccordionContent className="text-content-secondary text-[14px] leading-[1.6] pb-5 max-w-3xl">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -203,7 +203,7 @@ const Pricing = () => {
 
       {/* Pilots & Annual Plans */}
       <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-6">
             Pilots & annual plans.
           </h2>

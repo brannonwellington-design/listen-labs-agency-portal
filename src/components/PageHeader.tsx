@@ -7,7 +7,7 @@ interface PageHeaderProps {
 const PageHeader = ({ label, title, description }: PageHeaderProps) => {
   return (
     <section className="bg-surface-primary pt-32 pb-20">
-      <div className="container max-w-5xl">
+      <div className="container">
         <p className="text-[12px] text-content-secondary mb-8">{label}</p>
         <h1 className="text-[48px] md:text-[64px] leading-[1.05] text-content-primary mb-8 max-w-3xl">
           {title}

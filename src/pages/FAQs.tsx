@@ -109,7 +109,7 @@ const FAQs = () => {
       />
 
       <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
+        <div className="container">
           {/* Search */}
           <div className="relative mb-16 max-w-3xl">
             <Search
