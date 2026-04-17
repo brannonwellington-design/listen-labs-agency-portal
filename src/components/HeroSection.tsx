@@ -46,7 +46,7 @@ const HeroSection = () => {
 
         {/* Two-line hero headline — label promoted to primary, tagline in secondary */}
         <h1
-          className="text-[44px] md:text-[72px] leading-[1.02] tracking-[-0.02em] mb-10 animate-fade-up"
+          className="text-[64px] leading-[1.02] tracking-[-0.02em] mb-10 animate-fade-up"
         >
           <span className="block text-content-primary">Listen Agency Partner Program</span>
           <span className="block text-content-secondary">Win more research briefs with Listen.</span>
@@ -84,7 +84,7 @@ const HeroSection = () => {
                 key={cert.alt}
                 src={cert.src}
                 alt={cert.alt}
-                className="h-8 w-auto opacity-75 mix-blend-multiply dark:mix-blend-screen dark:invert"
+                className="h-12 w-auto opacity-75 mix-blend-multiply dark:mix-blend-screen dark:invert"
                 loading="lazy"
               />
             ))}
