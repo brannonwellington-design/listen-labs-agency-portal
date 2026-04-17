@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Menu } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import ListenLogo from "./ListenLogo";
@@ -21,6 +22,28 @@ const pageTitleMap: Record<string, string> = {
   "/how-to-pitch": "How to Pitch",
   "/use-cases": "Use Cases",
   "/faqs": "FAQs",
+};
+
+const MobileThemeRow = ({ onSelect }: { onSelect: () => void }) => {
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        setTheme(isDark ? "light" : "dark");
+        onSelect();
+      }}
+      className="flex items-center justify-between text-sm py-2 text-content-secondary hover:text-content-primary transition-colors"
+    >
+      <span>{isDark ? "Light mode" : "Dark mode"}</span>
+      {isDark ? (
+        <Sun className="h-4 w-4" strokeWidth={1.25} />
+      ) : (
+        <Moon className="h-4 w-4" strokeWidth={1.25} />
+      )}
+    </button>
+  );
 };
 
 const NavBar = () => {
@@ -77,9 +100,8 @@ const NavBar = () => {
           <ThemeToggle />
         </div>
 
-        {/* Mobile menu */}
-        <div className="md:hidden ml-auto flex items-center gap-3 relative z-10">
-          <ThemeToggle />
+        {/* Mobile menu — just the hamburger on the right, toggle lives inside */}
+        <div className="md:hidden ml-auto relative z-10">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Menu">
@@ -110,8 +132,14 @@ const NavBar = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm text-content-secondary hover:text-content-primary py-2"
                 >
-                  Platform <ArrowUpRight className="h-[14px] w-[14px]" strokeWidth={1} />
+                  Platform <ArrowUpRight className="h-3 w-3" strokeWidth={1} />
                 </a>
+                <div
+                  className="pt-4 mt-2 border-t"
+                  style={{ borderColor: "var(--surface-tertiary)" }}
+                >
+                  <MobileThemeRow onSelect={() => setOpen(false)} />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
