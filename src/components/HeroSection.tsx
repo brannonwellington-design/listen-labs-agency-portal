@@ -93,7 +93,7 @@ const HeroSection = () => {
 
         {/* Stat tiles — filled surface-secondary, 8px radius, numerals dominate */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 animate-fade-up"
+          className="grid grid-cols-2 md:grid-cols-4 gap-1 animate-fade-up"
           style={{ animationDelay: "0.45s" }}
         >
           {stats.map((s) => (

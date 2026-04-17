@@ -34,7 +34,7 @@ const MobileThemeRow = ({ onSelect }: { onSelect: () => void }) => {
         setTheme(isDark ? "light" : "dark");
         onSelect();
       }}
-      className="flex items-center justify-between text-sm py-2 text-content-secondary hover:text-content-primary transition-colors"
+      className="w-full flex items-center justify-between text-sm py-2 text-content-secondary hover:text-content-primary transition-colors"
     >
       <span>{isDark ? "Light mode" : "Dark mode"}</span>
       {isDark ? (
