@@ -46,7 +46,7 @@ const HeroSection = () => {
 
         {/* Two-line hero headline — label promoted to primary, tagline in secondary */}
         <h1
-          className="text-[64px] leading-[1.02] tracking-[-0.02em] mb-10 animate-fade-up"
+          className="text-[40px] sm:text-[48px] md:text-[64px] leading-[1.02] tracking-[-0.02em] mb-10 animate-fade-up"
         >
           <span className="block text-content-primary">Listen Agency Partner Program</span>
           <span className="block text-content-secondary">Win more research briefs with Listen.</span>

@@ -59,7 +59,8 @@ const NavBar = () => {
       <div className="relative h-14 flex items-center px-4 md:px-6">
         {/* Logo — top left */}
         <Link to="/" className="flex items-center gap-2 relative z-10 text-content-primary" aria-label="Home">
-          <ListenLogo className="h-5 w-auto" />
+          <ListenLogo markOnly className="h-5 w-auto md:hidden" />
+          <ListenLogo className="h-5 w-auto hidden md:block" />
         </Link>
 
         {/* Brand header — centered */}
