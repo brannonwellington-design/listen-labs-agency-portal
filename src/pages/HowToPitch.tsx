@@ -169,51 +169,86 @@ const HowToPitch = () => {
         </div>
       </section>
 
-      {/* Positioning tabs */}
-      <section className="py-20 bg-surface-highlight">
-        <div className="container max-w-5xl">
-          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-12">
+      {/* Positioning — full-width, editorial tab row with numbered indices */}
+      <section className="py-24 bg-surface-highlight">
+        <div className="container">
+          <p className="text-[12px] text-content-secondary mb-8">Positioning</p>
+          <h2 className="text-[48px] md:text-[72px] leading-[1.02] tracking-[-0.02em] text-content-primary mb-20 max-w-4xl">
             Position Listen by industry.
           </h2>
+
+          {/* Tab row — 6-up grid, full-width, numbered, with a thick
+              active-state underline for strong selected state */}
           <div
-            className="flex flex-wrap gap-6 mb-8 border-b pb-4"
-            style={{ borderColor: "var(--surface-tertiary)" }}
+            className="grid grid-cols-3 md:grid-cols-6 border-t"
+            style={{ borderColor: "var(--content-primary)" }}
           >
-            {positioningTabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`text-[14px] transition-colors ${
-                  activeTab === tab.id
-                    ? "text-content-primary"
-                    : "text-content-secondary hover:text-content-primary"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+            {positioningTabs.map((tab, i) => {
+              const active = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`text-left py-6 pr-4 transition-colors ${
+                    active ? "text-content-primary" : "text-content-secondary hover:text-content-primary"
+                  }`}
+                  style={{
+                    borderBottomWidth: 2,
+                    borderBottomColor: active ? "var(--content-primary)" : "transparent",
+                  }}
+                >
+                  <span className="block text-[11px] text-content-secondary mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="block text-[16px] md:text-[18px]">{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
-          <p className="text-[16px] text-content-primary leading-[1.6] max-w-3xl">
-            {positioningTabs.find((t) => t.id === activeTab)?.content}
-          </p>
+
+          {/* Content — two-column editorial layout: big industry name
+              left, generous body right. Active tab label echoed in display
+              scale as an anchor for the reader. */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mt-20">
+            <div className="md:col-span-4">
+              <p className="text-[12px] text-content-secondary mb-4">Industry</p>
+              <p className="text-[32px] md:text-[48px] leading-[1.05] tracking-[-0.02em] text-content-primary">
+                {positioningTabs.find((t) => t.id === activeTab)?.label}
+              </p>
+            </div>
+            <div className="md:col-span-8">
+              <p className="text-[18px] md:text-[20px] text-content-primary leading-[1.55]">
+                {positioningTabs.find((t) => t.id === activeTab)?.content}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Expertise Amplifier */}
-      <section className="py-20 bg-surface-primary">
-        <div className="container max-w-5xl">
-          <h2 className="text-[28px] md:text-[32px] leading-[1.1] text-content-primary mb-6">
-            Listen amplifies your expertise.
-          </h2>
-          <p className="text-[16px] text-content-secondary leading-[1.6] mb-4 max-w-3xl">
-            Listen doesn't replace your expertise, it amplifies it. You design the research, craft the
-            discussion guide, and interpret the findings. Listen handles the time-consuming 80% —
-            scheduling, moderating, transcribing, and initial coding.
-          </p>
-          <p className="text-[16px] text-content-secondary leading-[1.6] max-w-3xl">
-            Clients see linked verbatim quotes and timestamped clips. This is more transparent than
-            traditional research, not less.
-          </p>
+      {/* Expertise Amplifier — full-width editorial split with a
+          display-scale statement anchoring the left column */}
+      <section className="py-24 bg-surface-primary">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div className="md:col-span-7">
+              <h2 className="text-[48px] md:text-[72px] leading-[1.02] tracking-[-0.02em] text-content-primary">
+                Listen amplifies
+                <br />
+                your expertise.
+              </h2>
+            </div>
+            <div className="md:col-span-5 space-y-6">
+              <p className="text-[18px] md:text-[20px] text-content-primary leading-[1.55]">
+                Listen doesn't replace your expertise, it amplifies it. You design the research,
+                craft the discussion guide, and interpret the findings. Listen handles the
+                time-consuming 80% — scheduling, moderating, transcribing, and initial coding.
+              </p>
+              <p className="text-[16px] text-content-secondary leading-[1.6]">
+                Clients see linked verbatim quotes and timestamped clips. This is more transparent
+                than traditional research, not less.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -172,17 +172,27 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* By the numbers — inverse (dark) band */}
-      <section className="py-20 bg-surface-inverse-primary">
-        <div className="container max-w-5xl">
-          <p className="text-[12px] text-content-inverse-secondary mb-12">By the Numbers</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* By the Numbers — inverse band, full-width, massive scale,
+          hairline structure above stats for grid discipline */}
+      <section className="py-32 bg-surface-inverse-primary">
+        <div className="container">
+          <div
+            className="flex items-baseline justify-between pb-5 mb-16 border-b"
+            style={{ borderColor: "var(--content-inverse-secondary)" }}
+          >
+            <p className="text-[12px] text-content-inverse-secondary">By the Numbers</p>
+            <p className="text-[12px] text-content-inverse-secondary">
+              Across the Listen agency network
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8 md:gap-x-12">
             {stats.map((s) => (
               <div key={s.value}>
-                <p className="text-[48px] md:text-[56px] leading-none text-content-inverse-primary mb-4">
+                <p className="text-[56px] md:text-[88px] leading-[0.9] tracking-[-0.02em] text-content-inverse-primary mb-5">
                   {s.value}
                 </p>
-                <p className="text-[12px] text-content-inverse-secondary">{s.label}</p>
+                <p className="text-[14px] text-content-inverse-secondary">{s.label}</p>
               </div>
             ))}
           </div>
