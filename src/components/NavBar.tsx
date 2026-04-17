@@ -56,94 +56,103 @@ const NavBar = () => {
       className="fixed top-0 left-0 right-0 z-50 border-b bg-surface-primary"
       style={{ borderColor: "var(--surface-tertiary)" }}
     >
-      <div className="relative h-14 flex items-center px-4 md:px-6">
-        {/* Logo — top left */}
-        <Link to="/" className="flex items-center gap-2 relative z-10 text-content-primary" aria-label="Home">
-          <ListenLogo markOnly className="h-5 w-auto md:hidden" />
-          <ListenLogo className="h-5 w-auto hidden md:block" />
-        </Link>
-
-        {/* Brand header — centered */}
-        <div className="absolute inset-x-0 top-0 pt-[14px] text-center pointer-events-none">
-          <Link to="/" className="pointer-events-auto inline-block text-[12px] leading-none">
-            <span className="text-content-secondary">Listen Labs /</span>{" "}
-            <span className="text-content-primary">{projectTitle}</span>
+      {/* Three-column flex: logo | centered header | nav. Equal flex-1
+          on the outer two keeps the middle visually centered regardless
+          of what the outer columns hold. */}
+      <div className="h-14 flex items-center gap-4 px-4 md:px-6">
+        {/* Left — logo (mark-only below md, full wordmark from md up) */}
+        <div className="flex-1 min-w-0 flex items-center">
+          <Link to="/" className="text-content-primary inline-flex items-center" aria-label="Home">
+            <ListenLogo markOnly className="h-5 w-auto md:hidden" />
+            <ListenLogo className="h-5 w-auto hidden md:block" />
           </Link>
         </div>
 
-        {/* Right-aligned desktop nav */}
-        <div className="hidden md:flex ml-auto items-center gap-6 relative z-10">
-          {navLinks.map((link) => {
-            const active = location.pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "text-[12px] transition-colors",
-                  active
-                    ? "text-content-primary"
-                    : "text-content-secondary hover:text-content-primary"
-                )}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-          <a
-            href="https://listenlabs.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[12px] text-content-secondary hover:text-content-primary transition-colors"
-          >
-            Platform <ArrowUpRight className="h-[14px] w-[14px]" strokeWidth={1} />
-          </a>
-          <ThemeToggle />
-        </div>
+        {/* Center — Listen Labs / Project Title breadcrumb */}
+        <Link
+          to="/"
+          className="shrink-0 text-[12px] leading-none text-center whitespace-nowrap"
+        >
+          <span className="text-content-secondary">Listen Labs /</span>{" "}
+          <span className="text-content-primary">{projectTitle}</span>
+        </Link>
 
-        {/* Mobile menu — just the hamburger on the right, toggle lives inside */}
-        <div className="md:hidden ml-auto relative z-10">
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Menu">
-                <Menu className="h-5 w-5" strokeWidth={1.5} />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-surface-primary">
-              <SheetTitle className="sr-only">Navigation</SheetTitle>
-              <div className="flex flex-col gap-4 mt-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    onClick={() => setOpen(false)}
-                    className={cn(
-                      "text-sm py-2",
-                      location.pathname === link.href
-                        ? "text-content-primary"
-                        : "text-content-secondary hover:text-content-primary"
-                    )}
+        {/* Right — inline nav at lg+, hamburger below */}
+        <div className="flex-1 min-w-0 flex items-center justify-end gap-6">
+          {/* Desktop nav — only when there's room for all four labels */}
+          <div className="hidden lg:flex items-center gap-6">
+            {navLinks.map((link) => {
+              const active = location.pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "text-[12px] transition-colors whitespace-nowrap",
+                    active
+                      ? "text-content-primary"
+                      : "text-content-secondary hover:text-content-primary"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <a
+              href="https://listenlabs.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[12px] text-content-secondary hover:text-content-primary transition-colors whitespace-nowrap"
+            >
+              Platform <ArrowUpRight className="h-[14px] w-[14px]" strokeWidth={1} />
+            </a>
+            <ThemeToggle />
+          </div>
+
+          {/* Mobile/tablet hamburger — visible until lg */}
+          <div className="lg:hidden">
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Menu">
+                  <Menu className="h-5 w-5" strokeWidth={1.5} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64 bg-surface-primary">
+                <SheetTitle className="sr-only">Navigation</SheetTitle>
+                <div className="flex flex-col gap-4 mt-8">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        "text-sm py-2",
+                        location.pathname === link.href
+                          ? "text-content-primary"
+                          : "text-content-secondary hover:text-content-primary"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <a
+                    href="https://listenlabs.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-content-secondary hover:text-content-primary py-2"
                   >
-                    {link.label}
-                  </Link>
-                ))}
-                <a
-                  href="https://listenlabs.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-content-secondary hover:text-content-primary py-2"
-                >
-                  Platform <ArrowUpRight className="h-3 w-3" strokeWidth={1} />
-                </a>
-                <div
-                  className="pt-4 mt-2 border-t"
-                  style={{ borderColor: "var(--surface-tertiary)" }}
-                >
-                  <MobileThemeRow onSelect={() => setOpen(false)} />
+                    Platform <ArrowUpRight className="h-3 w-3" strokeWidth={1} />
+                  </a>
+                  <div
+                    className="pt-4 mt-2 border-t"
+                    style={{ borderColor: "var(--surface-tertiary)" }}
+                  >
+                    <MobileThemeRow onSelect={() => setOpen(false)} />
+                  </div>
                 </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </nav>
