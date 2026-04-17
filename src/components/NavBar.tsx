@@ -80,7 +80,7 @@ const NavBar = () => {
         {/* Right — inline nav at lg+, hamburger below */}
         <div className="flex-1 min-w-0 flex items-center justify-end gap-6">
           {/* Desktop nav — only when there's room for all four labels */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => {
               const active = location.pathname === link.href;
               return (
@@ -109,8 +109,8 @@ const NavBar = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile/tablet hamburger — visible until lg */}
-          <div className="lg:hidden">
+          {/* Mobile/tablet/small-laptop hamburger — visible until xl */}
+          <div className="xl:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Menu">
