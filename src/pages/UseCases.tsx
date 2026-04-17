@@ -57,7 +57,7 @@ const useCases = [
     challenge:
       "Canva needed qualitative insights across non-English speaking European markets, but coordinating moderators across 8 languages and time zones was cost-prohibitive.",
     result:
-      "Listen's AI conducted interviews in all 8 languages simultaneously. Respondents participated in their own language, on their own schedule. No local moderators needed.",
+      "Listen's AI Moderator conducted interviews in all 8 languages simultaneously. Respondents participated in their own language, on their own schedule. No local moderators needed.",
     metric: "100+ languages",
     quote:
       "Listen enabled us to get qualitative insights at scale in non-English speaking markets.",

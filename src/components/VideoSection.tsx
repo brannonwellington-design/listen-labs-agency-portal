@@ -5,7 +5,7 @@ const VideoSection = () => {
         <div className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-[12px] text-content-secondary mb-6">Product Overview</p>
           <h2 className="text-[40px] md:text-[48px] leading-[1.05] text-content-primary mb-6">
-            See Listen in 78 seconds.
+            See Listen in action.
           </h2>
           <p className="text-[18px] text-content-secondary leading-[1.5]">
             Before you pitch it, watch it. The fastest way to understand what Listen actually does.
@@ -19,7 +19,7 @@ const VideoSection = () => {
           >
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/v_-R9ijUo4Y"
+              src="https://www.youtube.com/embed/d_dH5nM0sBE?start=1"
               title="Listen Product Overview"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -17,10 +17,10 @@ const creditTiers = [
 ];
 
 const canRecruit = [
-  "Geographies: US, UK, EU, CA, and APAC markets",
-  "Consumer audiences: e.g. general population, category users, brand buyers",
-  "B2B audiences: e.g. job titles, seniority levels, industries",
-  "90+ languages supported",
+  "Verified respondents in 45+ countries",
+  "Consumer audiences spanning the general population",
+  "B2B audiences across job titles, seniority levels and industries",
+  "100+ languages supported",
 ];
 
 const customQuote = [
@@ -31,18 +31,18 @@ const customQuote = [
 const faqs = [
   { q: "What constitutes a 'project'?", a: "A project is a single study with one brief, one respondent pool, and one set of deliverables. Multiple waves of the same study count as separate projects." },
   { q: "What constitutes a 'completed response'?", a: "A completed response is a respondent who finishes the full interview flow, passes Quality Guard checks, and whose transcript is available in your dashboard." },
-  { q: "How quickly can a study turn around?", a: "Consumer recruitment typically finishes in a few days. B2B/specialist may take longer. Setup, moderation, and analysis run in real time." },
-  { q: "Is the platform secure and compliant?", a: "Yes. Listen is compliant with SOC 2 Type 2, GDPR, HIPAA, ISO 27001, and ISO 42001. Full details at trust.listenlabs.ai" },
+  { q: "How quickly can a study turn around?", a: "Most studies wrap in 2–5 days, vs. 4–8 weeks for traditional qual. Specialist recruits may take longer. Setup, moderation, and analysis run in real time." },
+  { q: "Is the platform secure and compliant?", a: "Yes. Listen is compliant with SOC 2 Type II, GDPR, HIPAA, ISO 27001, ISO 27701, and ISO 42001. Full details at trust.listenlabs.ai" },
   { q: "Are there volume discounts?", a: "Yes. Enterprise and high-volume pricing is available. Contact us for custom agency partnership rates." },
-  { q: "Will our clients accept AI moderation?", a: "Increasingly, they're the ones asking for it. Clients across tech, pharma, and financial services run Listen studies through their own review processes." },
+  { q: "Will our clients accept AI moderation?", a: "Increasingly, they're the ones asking for it. Top players across tech, pharma, and financial services have run Listen studies through their own review processes and adopted." },
 ];
 
 const platformFeatures = [
   "AI-moderated interviews at scale",
   "Auto-generated decks & video reels",
-  "Live data interface for your clients",
-  "All languages · Unlimited team seats",
-  "SOC 2 · GDPR · HIPAA · ISO 27001",
+  "100+ languages",
+  "Unlimited team seats",
+  "SOC 2 · GDPR · HIPAA · ISO 27001 · ISO 27701 · ISO 42001",
 ];
 
 // Reusable bordered container (no shadow, brand radius)

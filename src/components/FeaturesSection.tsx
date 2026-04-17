@@ -4,13 +4,13 @@ import { ArrowUpRight } from "lucide-react";
 const resources = [
   {
     title: "Pricing & Feasibility",
-    description: "Transparent, flexible pricing for research panels and agency partners.",
+    description: "Transparent, flexible pricing for agencies conducting all sorts of research.",
     href: "/pricing",
   },
   {
     title: "Pitch Resources",
     description:
-      "Scripts, objection handlers, and positioning guides so you can sell Listen confidently in any client conversation.",
+      "Scripts, objection handling, and positioning guides so you can sell Listen confidently in any client conversation.",
     href: "/how-to-pitch",
   },
   {
@@ -22,7 +22,7 @@ const resources = [
   {
     title: "FAQs",
     description:
-      "Honest answers about methodology, limitations, turnaround, and how Listen fits (or doesn't) alongside traditional qual.",
+      "Honest answers about methodology, limitations, turnaround, and how Listen fits (or doesn't) alongside your clients' research goals.",
     href: "/faqs",
   },
 ];
@@ -36,7 +36,7 @@ const FeaturesSection = () => {
             Everything you need to sell Listen.
           </h2>
           <p className="text-[18px] text-content-secondary leading-[1.5]">
-            From your first client pitch to running 50-participant studies, resources built for agency workflows.
+            From your first client pitch to running large, multi-market studies.
           </p>
         </div>
 

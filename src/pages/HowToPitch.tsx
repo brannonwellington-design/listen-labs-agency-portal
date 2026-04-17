@@ -15,26 +15,25 @@ import {
   Shield,
   Search,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const pitchSteps = [
   {
     step: "01",
     title: "Start with the brief, not the tool.",
     description:
-      "Ask what they're trying to learn, not how they want to run the study. Position yourself as a strategic partner first. Listen becomes the natural solution once the need is clear.",
+      "Ask what they're trying to learn, not how they want to run the study. Position yourself as a strategic partner first. Listen becomes the natural solution when there is a need to understand the \"why\" across a large sample.",
   },
   {
     step: "02",
     title: "Show, don't explain.",
     description:
-      "The best pitch is a demo or a pilot result. Offer to run a small test on a real brief. Most clients who see a Listen output become believers immediately.",
+      "Use previous examples to show clients the Listen process and output. This will help build their trust in Listen, the new way to uncover insights.",
   },
   {
     step: "03",
     title: "Price it right, win the room.",
     description:
-      "Present the Listen cost as the research cost, with your agency margin built in. Clients don't need to know the underlying tool — they need to know what they'll get and when.",
+      "Present the Listen cost as the research cost, with your agency margin built in.",
   },
 ];
 
@@ -49,7 +48,7 @@ const positioningTabs = [
     id: "tech",
     label: "Technology",
     content:
-      "Position Listen as the go-to tool for continuous product discovery. Tech teams need to validate feature ideas early and often, but traditional research slows sprint cycles down. Listen lets product and UX teams run fast, async studies with real users to test concepts, flows, and messaging before a single line of code is written. Lead with speed, cost-efficiency, and the ability to move at the pace of product development.",
+      "Position Listen as the go-to tool for continuous product discovery. Tech teams need to validate feature ideas early and often, but traditional research slows sprint cycles down. Listen lets product and UX teams run fast, async studies with real users to test concepts, flows, and messaging. Lead with speed, cost-efficiency, and the ability to move at the pace of product development.",
   },
   {
     id: "ecommerce",
@@ -61,7 +60,7 @@ const positioningTabs = [
     id: "healthcare",
     label: "Healthcare",
     content:
-      "Position Listen as the most accessible way to reach patients, HCPs, and payers at scale. Healthcare research has traditionally been slow, expensive, and logistically complex. Listen enables async video conversations with hard-to-reach audiences across segments, delivering genuine emotional and behavioral insight. Lead with compliance-friendly, high-quality qual that doesn't require scheduling 1:1 interviews.",
+      "Position Listen as the way to run healthcare research at scale without cutting corners. Talk to doctors and patients across countries and languages at the same time, with a moderator that actually understands medical terms and drug names. If a respondent mentions a side effect, we flag it automatically so your safety team has a clean record. Lead with an approach to consent, data, and moderation built to work with your legal and compliance teams, not around them.",
   },
   {
     id: "financial",
@@ -82,24 +81,29 @@ const keyBenefits = [
   { icon: Zap, title: "Scale", description: "Run high-quality qualitative research with any sample size, without increasing effort." },
   { icon: Search, title: "Depth", description: "Get granular insights through automated targeted follow-ups that help understand the \"why\" behind responses." },
   { icon: Globe, title: "Multilingual", description: "Conduct and analyze research across 100+ languages with native-level understanding." },
-  { icon: Users, title: "Flexible scheduling", description: "Respondents participate on their own time. They can join from their phone, anywhere, whenever it suits them." },
-  { icon: Presentation, title: "Compelling outputs", description: "Instantly create reels, charts, summaries, and slide-ready content stakeholders engage with." },
+  { icon: Users, title: "Flexible scheduling", description: "Respondents can join from their mobile device, from anywhere, whenever suits them. This flexibility makes incentives more comparable to quant studies." },
+  { icon: Presentation, title: "Compelling outputs", description: "Instantly create reels, charts, summaries and content that can enhance your final deliverables." },
 ];
 
 const standouts = [
   { icon: Video, title: "End-to-end, natural video conversations", description: "Interviews feel more like a conversation than a survey, with adaptive follow-ups that respond to what was just said and a moderator style that feels natural." },
   { icon: Brain, title: "True multimodal analysis", description: "Insights are derived not only from what people say, but also from visuals, tone of voice, emotions, behaviors, and context — all analyzed together." },
-  { icon: Target, title: "Research-grade AI moderation", description: "The AI moderator is built on established research methodologies and probing techniques, ensuring consistency, depth, and relevance across interviews — while tactfully incorporating the researcher's expertise." },
+  { icon: Target, title: "Research-grade AI moderation", description: "The AI moderator is built on established research methodologies and probing techniques, ensuring consistency, depth, and relevance across interviews, while also incorporating researcher expertise and study nuance." },
   { icon: Clock, title: "Unlimited depth and duration", description: "Studies are not constrained by rigid time limits, enabling deeper exploration when needed without compromising participant experience." },
-  { icon: Presentation, title: "From insights to usable content", description: "Findings are immediately translated into stakeholder-ready outputs — video highlight reels, charts, summaries, and presentation-ready materials." },
-  { icon: Shield, title: "Quality Guard", description: "Automated respondent quality checks that catch bots, low-effort responses, and off-topic answers before they hit your deliverable." },
+  { icon: Presentation, title: "Leverage insights effectively", description: "Support core stakeholder materials with Listen's in-depth analysis. Quickly answer research questions with our Research Agent or drive home a key point with emphasis by generating a custom highlight reel." },
+  { icon: Shield, title: "Quality Guard", description: "Automated respondent quality checks that catch bots, low-effort responses, and off-topic answers before they hit your dataset." },
 ];
 
 const objections = [
   {
+    objection: "Will our internal stakeholders trust AI-moderated research findings?",
+    response:
+      "Yes — Listen already powers insights at top enterprises like Microsoft, Google, Nestle, Levi's and more. Listen only fields verified respondents and maintains full traceability within its platform.",
+  },
+  {
     objection: "Is AI actually able to conduct real research?",
     response:
-      "Listen conducts full video interviews with natural conversation flow. The AI detects when to ask follow-up questions in real time and can even draft interview guides based on your research objectives.",
+      "Listen conducts full video interviews. Listen can draft interview guides based on your research objectives and detects when to ask follow-up questions in real time.",
   },
   {
     objection: "We can't afford to add another tool.",
@@ -107,14 +111,9 @@ const objections = [
       "Listen is significantly more cost-effective than traditional qual, and projects that once took weeks to field and analyze can be completed in days. The ROI pitch writes itself.",
   },
   {
-    objection: "We don't have time to learn a new platform.",
-    response:
-      "Agencies typically launch their first project within a day. The platform is designed to be intuitive: upload a discussion guide, define your audience, and Listen handles the rest.",
-  },
-  {
     objection: "What about data security and compliance?",
     response:
-      "SOC 2 Type II certified, GDPR compliant, HIPAA compliant. Enterprise-grade security that satisfies the most demanding clients.",
+      "Listen is SOC 2 Type II certified, GDPR compliant, HIPAA compliant, and ISO 27001, ISO 27701, and ISO 42001 certified. Enterprise-grade security that satisfies the most demanding clients.",
   },
 ];
 
@@ -135,35 +134,16 @@ const HowToPitch = () => {
         <div className="container max-w-5xl">
           <p className="text-[12px] text-content-secondary mb-8">The Value Proposition</p>
           <blockquote className="text-[28px] md:text-[40px] leading-[1.15] text-content-primary mb-8 max-w-4xl">
-            Listen gives agencies what qual has always promised but rarely delivered: depth at scale,
-            without the moderator bottleneck.{" "}
             <span className="text-content-brand">
-              Clients get video evidence, not just summaries. You deliver in days, not weeks.
-            </span>
+              Listen gives agencies depth at scale and removes the moderator bottleneck.
+            </span>{" "}
+            Clients get video evidence, not just summaries. You deliver in days, not weeks.
           </blockquote>
           <p className="text-[16px] text-content-secondary leading-[1.6] max-w-3xl">
             The sell isn't "this is cheaper than focus groups." It's "you get more: more respondents,
             more flexibility, more evidence, faster." Position Listen as an upgrade to your current
             research workflow, not a replacement for it.
           </p>
-
-          <div
-            className="mt-12 p-8 border-l-2 max-w-3xl"
-            style={{
-              backgroundColor: "var(--surface-brand-secondary)",
-              borderColor: "var(--content-brand)",
-            }}
-          >
-            <p className="text-[12px] text-content-secondary mb-3">78-Second Overview</p>
-            <p className="text-[18px] text-content-primary mb-6 leading-[1.4]">
-              Drop this into a proposal or play it at the start of a meeting.
-            </p>
-            <Button size="sm" asChild>
-              <a href="https://www.youtube.com/watch?v=v_-R9ijUo4Y" target="_blank" rel="noopener noreferrer">
-                Watch the Overview
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 
