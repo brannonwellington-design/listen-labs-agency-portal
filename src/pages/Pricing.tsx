@@ -32,9 +32,25 @@ const faqs = [
   { q: "What constitutes a 'project'?", a: "A project is a single study with one brief, one respondent pool, and one set of deliverables. Multiple waves of the same study count as separate projects." },
   { q: "What constitutes a 'completed response'?", a: "A completed response is a respondent who finishes the full interview flow, passes Quality Guard checks, and whose transcript is available in your dashboard." },
   { q: "How quickly can a study turn around?", a: "Most studies wrap in 2–5 days, vs. 4–8 weeks for traditional qual. Specialist recruits may take longer. Setup, moderation, and analysis run in real time." },
-  { q: "Is the platform secure and compliant?", a: "Yes. Listen is compliant with SOC 2 Type II, GDPR, HIPAA, ISO 27001, ISO 27701, and ISO 42001. Full details at trust.listenlabs.ai" },
+  {
+    q: "Is the platform secure and compliant?",
+    a: (
+      <>
+        Yes. Listen is compliant with SOC 2 Type II, GDPR, HIPAA, ISO 27001, ISO 27701, and
+        ISO 42001. Full details at{" "}
+        <a
+          href="https://trust.listenlabs.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-content-brand underline underline-offset-4 hover:opacity-80"
+        >
+          trust.listenlabs.ai
+        </a>
+      </>
+    ),
+  },
   { q: "Are there volume discounts?", a: "Yes. High-volume pricing is available. Contact us for custom agency partnership rates." },
-  { q: "Will our clients accept AI moderation?", a: "Increasingly, they're the ones asking for it. Top players across tech, pharma, and financial services have run Listen studies through their own review processes and adopted." },
+  { q: "Will our clients accept AI moderation?", a: "Increasingly, they're the ones asking for it. Top players across CPG, tech, e-commerce, healthcare, financial services, and hospitality & travel have run Listen studies through their own review processes and adopted." },
 ];
 
 const platformFeatures = [
