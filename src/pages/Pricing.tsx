@@ -10,9 +10,9 @@ import {
 import { Check } from "lucide-react";
 
 const creditTiers = [
-  { label: "Self-Recruited (agency sources respondents)", priceLine1: "$15 per respondent", priceLine2: "2 credits per respondent" },
-  { label: "Listen Consumer Panel, 20%+ incidence rate", priceLine1: "$37.50 per respondent", priceLine2: "5 credits per respondent" },
-  { label: "Listen Consumer Panel, 5–20% incidence rate", priceLine1: "$60 per respondent", priceLine2: "8 credits per respondent" },
+  { label: "Self-Recruited (agency sources respondents)", priceLine1: "$20 per respondent", priceLine2: "2 credits per respondent" },
+  { label: "Listen Consumer Panel, 20%+ incidence rate", priceLine1: "$50 per respondent", priceLine2: "5 credits per respondent" },
+  { label: "Listen Consumer Panel, 5–20% incidence rate", priceLine1: "$80 per respondent", priceLine2: "8 credits per respondent" },
   { label: "Listen B2B / Specialist (complex or low-incidence audiences)", priceLine1: "On request", priceLine2: "" },
 ];
 
@@ -91,7 +91,7 @@ const Pricing = () => {
                 }}
               >
                 <p className="text-[14px] text-content-primary">
-                  Pilot rate: $1,000 / project for new agency partners
+                  One-time pilot rate: $1,000 / project for new agency partners
                 </p>
               </div>
             </div>
@@ -130,6 +130,29 @@ const Pricing = () => {
               <p className="text-[12px] text-content-secondary mt-4">
                 Pricing shown is for US-only respondents.
               </p>
+            </div>
+
+            {/* Subscriptions — full-width panel spanning both columns */}
+            <div className={`${cardStyle} md:col-span-2`} style={cardBorder}>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
+                <div className="md:col-span-5">
+                  <p className="text-[12px] text-content-secondary mb-4">Subscriptions</p>
+                  <p className="text-[32px] leading-[1.1] text-content-primary">
+                    Pilot, then annual.
+                  </p>
+                </div>
+                <div className="md:col-span-7">
+                  <p className="text-[14px] text-content-primary leading-[1.6] mb-4">
+                    Agencies typically begin with one pilot project at the discounted platform
+                    rate. After piloting, we encourage moving to an annual subscription structured
+                    around your anticipated usage over the next 12 months, a bundle of projects
+                    and respondent credits sized to your needs.
+                  </p>
+                  <p className="text-[14px] text-content-secondary leading-[1.6]">
+                    Most agencies run their first project within a week of signing up.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -198,21 +221,6 @@ const Pricing = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </section>
-
-      {/* Pilots & Annual Plans */}
-      <section className="py-20 bg-surface-highlight">
-        <div className="container">
-          <h2 className="text-[32px] md:text-[40px] leading-[1.05] text-content-primary mb-6">
-            Pilots & annual plans.
-          </h2>
-          <p className="text-[16px] text-content-secondary leading-[1.6] max-w-3xl">
-            Agencies typically begin with one pilot project at the discounted platform rate. After
-            piloting, we encourage moving to an annual subscription structured around your anticipated
-            usage over the next 12 months, a bundle of projects and respondent credits sized to your
-            needs. Most agencies run their first project within a week of signing up.
-          </p>
         </div>
       </section>
 
