@@ -56,9 +56,8 @@ const HeroSection = () => {
           className="text-[16px] md:text-[18px] text-content-primary max-w-2xl mb-10 leading-[1.55] animate-fade-up"
           style={{ animationDelay: "0.15s" }}
         >
-          Your complete guide to adding AI moderation to your toolkit to best support your
-          clients' objectives. Faster insights, bigger studies, and a methodology your clients
-          haven't heard of yet.
+          Your complete guide to adding AI moderation to your toolkit. Faster insights and bigger
+          studies to satisfy your clients' needs.
         </p>
 
         {/* CTA + inline cert strip , two rhythms, one row on desktop */}
