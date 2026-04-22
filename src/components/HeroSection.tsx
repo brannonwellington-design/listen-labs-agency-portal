@@ -28,7 +28,7 @@ const HeroSection = () => {
   return (
     <section className="pt-32 pb-20 bg-surface-primary">
       <div className="container">
-        {/* Forbes AI 50 tag — 1px hairline, full-rounded editorial mark */}
+        {/* Forbes AI 50 tag , 1px hairline, full-rounded editorial mark */}
         <a
           href="https://www.forbes.com/lists/ai50/"
           target="_blank"
@@ -44,7 +44,7 @@ const HeroSection = () => {
           />
         </a>
 
-        {/* Two-line hero headline — label promoted to primary, tagline in secondary */}
+        {/* Two-line hero headline , label promoted to primary, tagline in secondary */}
         <h1
           className="text-[40px] sm:text-[48px] md:text-[64px] leading-[1.02] tracking-[-0.02em] mb-10 animate-fade-up"
         >
@@ -61,7 +61,7 @@ const HeroSection = () => {
           haven't heard of yet.
         </p>
 
-        {/* CTA + inline cert strip — two rhythms, one row on desktop */}
+        {/* CTA + inline cert strip , two rhythms, one row on desktop */}
         <div
           className="flex flex-col lg:flex-row lg:items-center gap-8 mb-16 animate-fade-up"
           style={{ animationDelay: "0.3s" }}
@@ -77,7 +77,7 @@ const HeroSection = () => {
             </a>
           </Button>
 
-          {/* Compact certification strip — inline beside CTA */}
+          {/* Compact certification strip , inline beside CTA */}
           <div className="flex items-center gap-4 lg:ml-auto">
             {certifications.map((cert) => (
               <img
@@ -91,7 +91,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Stat tiles — filled surface-secondary, 8px radius, numerals dominate */}
+        {/* Stat tiles , filled surface-secondary, 8px radius, numerals dominate */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-1 animate-fade-up"
           style={{ animationDelay: "0.45s" }}

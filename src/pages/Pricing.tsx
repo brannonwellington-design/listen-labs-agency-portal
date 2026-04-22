@@ -210,7 +210,7 @@ const Pricing = () => {
           <p className="text-[16px] text-content-secondary leading-[1.6] max-w-3xl">
             Agencies typically begin with one pilot project at the discounted platform rate. After
             piloting, we encourage moving to an annual subscription structured around your anticipated
-            usage over the next 12 months — a bundle of projects and respondent credits sized to your
+            usage over the next 12 months, a bundle of projects and respondent credits sized to your
             needs. Most agencies run their first project within a week of signing up.
           </p>
         </div>

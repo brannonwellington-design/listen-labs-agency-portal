@@ -14,7 +14,7 @@ const useCases = [
     title: "3× interview capacity for B2B.",
     client: "Emerald Research Group",
     challenge:
-      "Reaching C-suite decision-makers for in-depth interviews is notoriously difficult — they're busy, spread across time zones, and traditional scheduling requires weeks of blocked moderator time.",
+      "Reaching C-suite decision-makers for in-depth interviews is notoriously difficult; they're busy, spread across time zones, and traditional scheduling requires weeks of blocked moderator time.",
     result:
       "Emerald scaled from 20–30 interviews over a month to 60 interviews in under a week. Respondents engaged at 5am or 11pm on their own terms.",
     metric: "3× capacity",
@@ -71,7 +71,7 @@ const useCases = [
     challenge:
       "A fast-growing DTC drinkware brand needed deeper consumer insights beyond their Oklahoma base, but traditional focus groups only reached ~30 local people after weeks of scheduling.",
     result:
-      "Listen delivered 120 video interviews in 2.5 hours — 4× bigger samples with nationwide reach. The team moved from basic market sizing to understanding the \"why\" behind consumer behavior.",
+      "Listen delivered 120 video interviews in 2.5 hours, 4× bigger samples with nationwide reach. The team moved from basic market sizing to understanding the \"why\" behind consumer behavior.",
     metric: "4× reach",
     quote:
       "Numbers tell you what coffee snobs buy. Listen Labs tells you why.",
@@ -120,7 +120,7 @@ const UseCases = () => {
         description="Real results from research agencies and the brands they serve."
       />
 
-      {/* Use case list — editorial rows, no cards */}
+      {/* Use case list , editorial rows, no cards */}
       <section className="py-20 bg-surface-primary">
         <div className="container">
           {useCases.map((uc, i) => (
@@ -172,7 +172,7 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* By the Numbers — inverse band, full-width, massive scale,
+      {/* By the Numbers , inverse band, full-width, massive scale,
           hairline structure above stats for grid discipline */}
       <section className="py-32 bg-surface-inverse-primary">
         <div className="container">
@@ -199,7 +199,7 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* Trusted by — editorial split: display headline anchors the left,
+      {/* Trusted by , editorial split: display headline anchors the left,
           logo grid lives on the right, inside a structural rule frame */}
       <section className="py-24 bg-surface-highlight">
         <div className="container">
@@ -214,7 +214,7 @@ const UseCases = () => {
               </h2>
               <p className="text-[14px] text-content-secondary leading-[1.6] max-w-sm">
                 Listen powers research at Fortune 500 brands and the agencies they
-                partner with — spanning CPG, tech, financial services, and beyond.
+                partner with, spanning CPG, tech, financial services, and beyond.
               </p>
             </div>
 

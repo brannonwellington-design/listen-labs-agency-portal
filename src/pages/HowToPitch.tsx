@@ -87,7 +87,7 @@ const keyBenefits = [
 
 const standouts = [
   { icon: Video, title: "End-to-end, natural video conversations", description: "Interviews feel more like a conversation than a survey, with adaptive follow-ups that respond to what was just said and a moderator style that feels natural." },
-  { icon: Brain, title: "True multimodal analysis", description: "Insights are derived not only from what people say, but also from visuals, tone of voice, emotions, behaviors, and context — all analyzed together." },
+  { icon: Brain, title: "True multimodal analysis", description: "Insights are derived not only from what people say, but also from visuals, tone of voice, emotions, behaviors, and context, all analyzed together." },
   { icon: Target, title: "Research-grade AI moderation", description: "The AI moderator is built on established research methodologies and probing techniques, ensuring consistency, depth, and relevance across interviews, while also incorporating researcher expertise and study nuance." },
   { icon: Clock, title: "Unlimited depth and duration", description: "Studies are not constrained by rigid time limits, enabling deeper exploration when needed without compromising participant experience." },
   { icon: Presentation, title: "Leverage insights effectively", description: "Support core stakeholder materials with Listen's in-depth analysis. Quickly answer research questions with our Research Agent or drive home a key point with emphasis by generating a custom highlight reel." },
@@ -98,7 +98,7 @@ const objections = [
   {
     objection: "Will our internal stakeholders trust AI-moderated research findings?",
     response:
-      "Yes — Listen already powers insights at top enterprises like Microsoft, Google, Nestle, Levi's and more. Listen only fields verified respondents and maintains full traceability within its platform.",
+      "Yes, Listen already powers insights at top enterprises like Microsoft, Google, Nestle, Levi's and more. Listen only fields verified respondents and maintains full traceability within its platform.",
   },
   {
     objection: "Is AI actually able to conduct real research?",
@@ -169,7 +169,7 @@ const HowToPitch = () => {
         </div>
       </section>
 
-      {/* Positioning — full-width, editorial tab row with numbered indices */}
+      {/* Positioning , full-width, editorial tab row with numbered indices */}
       <section className="py-24 bg-surface-highlight">
         <div className="container">
           <p className="text-[12px] text-content-secondary mb-8">Positioning</p>
@@ -177,7 +177,7 @@ const HowToPitch = () => {
             Position Listen by industry.
           </h2>
 
-          {/* Tab row — 6-up grid, full-width, numbered, with a thick
+          {/* Tab row , 6-up grid, full-width, numbered, with a thick
               active-state underline for strong selected state */}
           <div
             className="grid grid-cols-3 md:grid-cols-6 border-t"
@@ -206,7 +206,7 @@ const HowToPitch = () => {
             })}
           </div>
 
-          {/* Content — two-column editorial layout: big industry name
+          {/* Content , two-column editorial layout: big industry name
               left, generous body right. Active tab label echoed in display
               scale as an anchor for the reader. */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mt-20">
@@ -225,7 +225,7 @@ const HowToPitch = () => {
         </div>
       </section>
 
-      {/* Expertise Amplifier — full-width editorial split with a
+      {/* Expertise Amplifier , full-width editorial split with a
           display-scale statement anchoring the left column */}
       <section className="py-24 bg-surface-primary">
         <div className="container">
@@ -241,7 +241,7 @@ const HowToPitch = () => {
               <p className="text-[18px] md:text-[20px] text-content-primary leading-[1.55]">
                 Listen doesn't replace your expertise, it amplifies it. You design the research,
                 craft the discussion guide, and interpret the findings. Listen handles the
-                time-consuming 80% — scheduling, moderating, transcribing, and initial coding.
+                time-consuming 80%; scheduling, moderating, transcribing, and initial coding.
               </p>
               <p className="text-[16px] text-content-secondary leading-[1.6]">
                 Clients see linked verbatim quotes and timestamped clips. This is more transparent

@@ -60,7 +60,7 @@ const NavBar = () => {
           on the outer two keeps the middle visually centered regardless
           of what the outer columns hold. */}
       <div className="h-14 flex items-center gap-4 px-4 md:px-6">
-        {/* Left — logo (mark-only below md, full wordmark from md up) */}
+        {/* Left , logo (mark-only below md, full wordmark from md up) */}
         <div className="flex-1 min-w-0 flex items-center">
           <Link to="/" className="text-content-primary inline-flex items-center" aria-label="Home">
             <ListenLogo markOnly className="h-5 w-auto md:hidden" />
@@ -68,7 +68,7 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* Center — Listen Labs / Project Title breadcrumb */}
+        {/* Center , Listen Labs / Project Title breadcrumb */}
         <Link
           to="/"
           className="shrink-0 text-[12px] leading-none text-center whitespace-nowrap"
@@ -77,9 +77,9 @@ const NavBar = () => {
           <span className="text-content-primary">{projectTitle}</span>
         </Link>
 
-        {/* Right — inline nav at lg+, hamburger below */}
+        {/* Right , inline nav at lg+, hamburger below */}
         <div className="flex-1 min-w-0 flex items-center justify-end gap-6">
-          {/* Desktop nav — only when there's room for all four labels */}
+          {/* Desktop nav , only when there's room for all four labels */}
           <div className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => {
               const active = location.pathname === link.href;
@@ -109,7 +109,7 @@ const NavBar = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile/tablet/small-laptop hamburger — visible until xl */}
+          {/* Mobile/tablet/small-laptop hamburger , visible until xl */}
           <div className="xl:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
