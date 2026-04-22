@@ -64,7 +64,7 @@ const faqCategories = [
       { q: "How are AI credits calculated?", a: "Credits are based on interview duration and the number of participants. Longer and more complex studies use more credits." },
       { q: "What's included in the platform cost?", a: "Platform access, AI moderation, all 100+ languages, unlimited seats, analysis tools, video exports, and dedicated support." },
       { q: "How do panel incentives work?", a: "If using integrated panels, incentives are paid per participant and vary by audience feasibility and market." },
-      { q: "Are there volume discounts?", a: "Yes, enterprise and high-volume pricing is available. Contact us for custom agency partnership rates." },
+      { q: "Are there volume discounts?", a: "Yes, high-volume pricing is available. Contact us for custom agency partnership rates." },
       { q: "What if I run out of credits?", a: "You can purchase additional credits at any time. We'll notify you when you're running low." },
       { q: "What contract options are available?", a: "Annual contracts are standard, with quarterly and monthly options available for agencies testing the platform." },
     ],
