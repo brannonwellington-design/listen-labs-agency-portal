@@ -109,7 +109,7 @@ const Pricing = () => {
                 }}
               >
                 <p className="text-[14px] text-content-primary">
-                  One-time pilot rate: $1,000 / project for new agency partners
+                  One-time pilot rate: $3,000 per pilot for new agency partners
                 </p>
               </div>
             </div>
