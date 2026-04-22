@@ -61,8 +61,10 @@ const platformFeatures = [
   "SOC 2 · GDPR · HIPAA · ISO 27001 · ISO 27701 · ISO 42001",
 ];
 
-// Reusable bordered container (no shadow, brand radius)
-const cardStyle = "border p-8 md:p-10 bg-surface-highlight";
+// Reusable bordered container (no shadow, brand radius).
+// flex flex-col lets card footers anchor to the bottom with mt-auto
+// so side-by-side cards feel balanced even when content length differs.
+const cardStyle = "border p-8 md:p-10 bg-surface-highlight flex flex-col";
 const cardBorder = { borderColor: "var(--surface-tertiary)", borderRadius: 12 };
 
 const Pricing = () => {
@@ -100,7 +102,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <div
-                className="px-5 py-4 border-l-2"
+                className="px-5 py-4 border-l-2 mt-auto"
                 style={{
                   backgroundColor: "var(--surface-brand-secondary)",
                   borderColor: "var(--content-brand)",
@@ -143,21 +145,23 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <p className="text-[12px] text-content-secondary mt-4">
+              <p className="text-[12px] text-content-secondary mt-auto pt-4">
                 Pricing shown is for US-only respondents.
               </p>
             </div>
 
-            {/* Subscriptions — full-width panel spanning both columns */}
+            {/* Subscriptions — full-width panel spanning both columns.
+                Inner 50/50 split matches the two-card boundary above so
+                the content columns align cleanly end to end. */}
             <div className={`${cardStyle} md:col-span-2`} style={cardBorder}>
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
-                <div className="md:col-span-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
                   <p className="text-[12px] text-content-secondary mb-4">Subscriptions</p>
                   <p className="text-[32px] leading-[1.1] text-content-primary">
                     Pilot, then annual.
                   </p>
                 </div>
-                <div className="md:col-span-7">
+                <div>
                   <p className="text-[14px] text-content-primary leading-[1.6] mb-4">
                     Agencies typically begin with one pilot project at the discounted platform
                     rate. After piloting, we encourage moving to an annual subscription structured
