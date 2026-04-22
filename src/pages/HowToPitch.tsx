@@ -19,7 +19,7 @@ import {
 const pitchSteps = [
   {
     step: "01",
-    title: "Start with the brief, not the tool.",
+    title: "The best brief leads to Listen.",
     description:
       "Ask what they're trying to learn, not how they want to run the study. Position yourself as a strategic partner first. Listen becomes the natural solution when there is a need to understand the \"why\" across a large sample.",
   },
