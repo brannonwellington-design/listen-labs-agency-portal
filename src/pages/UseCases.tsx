@@ -179,10 +179,7 @@ const UseCases = () => {
           hairline structure above stats for grid discipline */}
       <section className="py-32 bg-surface-inverse-primary">
         <div className="container">
-          <div
-            className="flex items-baseline justify-between pb-5 mb-16 border-b"
-            style={{ borderColor: "var(--content-inverse-secondary)" }}
-          >
+          <div className="flex items-baseline justify-between mb-16">
             <p className="text-[12px] text-content-inverse-secondary">By the Numbers</p>
             <p className="text-[12px] text-content-inverse-secondary">
               Across the Listen agency network
@@ -206,10 +203,7 @@ const UseCases = () => {
           logo grid lives on the right, inside a structural rule frame */}
       <section className="py-24 bg-surface-highlight">
         <div className="container">
-          <div
-            className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start pt-12 border-t"
-            style={{ borderColor: "var(--content-primary)" }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div className="md:col-span-5">
               <p className="text-[12px] text-content-secondary mb-6">Trusted by</p>
               <h2 className="text-[40px] md:text-[56px] leading-[1.02] tracking-[-0.02em] text-content-primary mb-6">
