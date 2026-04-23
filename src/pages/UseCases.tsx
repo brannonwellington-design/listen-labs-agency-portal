@@ -219,15 +219,20 @@ const UseCases = () => {
             </div>
 
             <div className="md:col-span-7">
-              <div className="grid grid-cols-3 gap-y-14 gap-x-8 items-center">
+              {/* Logo grid — each brand sits in its own surface-secondary tile,
+                  uniform aspect ratio + max-h on the image so every lockup lands
+                  at the same visual size regardless of source aspect. */}
+              <div className="grid grid-cols-3 gap-1">
                 {trustedBy.map((brand) => (
-                  <div key={brand.name} className="flex items-center justify-center">
+                  <div
+                    key={brand.name}
+                    className="bg-surface-secondary flex items-center justify-center aspect-[3/2] p-4"
+                    style={{ borderRadius: 8 }}
+                  >
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className={`object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert ${
-                        brand.name === "Emerald Research Group" ? "h-14 md:h-16" : "h-10 md:h-12"
-                      }`}
+                      className="max-h-9 md:max-h-10 w-auto max-w-[75%] object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert"
                     />
                   </div>
                 ))}
