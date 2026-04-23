@@ -29,7 +29,7 @@ const customQuote = [
 ];
 
 const faqs = [
-  { q: "What constitutes a 'project'?", a: "A project is a single study with one brief, one respondent pool, and one set of deliverables. Multiple waves of the same study count as separate projects." },
+  { q: "What constitutes a 'study'?", a: "A study has one brief, one respondent pool, and one set of deliverables. Multiple waves of the same research count as separate studies." },
   { q: "What constitutes a 'completed response'?", a: "A completed response is a respondent who finishes the full interview flow, passes Quality Guard checks, and whose transcript is available in your dashboard." },
   { q: "How quickly can a study turn around?", a: "Most studies wrap in 2–5 days, vs. 4–8 weeks for traditional qual. Specialist recruits may take longer. Setup, moderation, and analysis run in real time." },
   {
@@ -88,7 +88,7 @@ const Pricing = () => {
             <div className={cardStyle} style={cardBorder}>
               <p className="text-[12px] text-content-secondary mb-4">Platform Access</p>
               <p className="text-[48px] leading-none text-content-primary mb-2">$5,000</p>
-              <p className="text-[14px] text-content-secondary mb-8">/ project</p>
+              <p className="text-[14px] text-content-secondary mb-8">/ study</p>
               <ul className="space-y-3 mb-8">
                 {platformFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-[14px] text-content-primary">
@@ -163,13 +163,13 @@ const Pricing = () => {
                 </div>
                 <div>
                   <p className="text-[14px] text-content-primary leading-[1.6] mb-4">
-                    Agencies typically begin with one pilot project at the discounted platform
+                    Agencies typically begin with one pilot study at the discounted platform
                     rate. After piloting, we encourage moving to an annual subscription structured
-                    around your anticipated usage over the next 12 months, a bundle of projects
+                    around your anticipated usage over the next 12 months, a bundle of studies
                     and respondent credits sized to your needs.
                   </p>
                   <p className="text-[14px] text-content-secondary leading-[1.6]">
-                    Most agencies run their first project within a week of signing up.
+                    Most agencies run their first study within a week of signing up.
                   </p>
                 </div>
               </div>

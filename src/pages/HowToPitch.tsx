@@ -108,7 +108,7 @@ const objections = [
   {
     objection: "We can't afford to add another tool.",
     response:
-      "Listen is significantly more cost-effective than traditional qual, and projects that once took weeks to field and analyze can be completed in days. The ROI pitch writes itself.",
+      "Listen is significantly more cost-effective than traditional qual, and studies that once took weeks to field and analyze can be completed in days. The ROI pitch writes itself.",
   },
   {
     objection: "What about data security and compliance?",
