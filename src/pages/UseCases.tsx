@@ -106,7 +106,7 @@ const stats = [
 // visually matched rather than mathematically identical.
 const trustedBy = [
   { name: "Kantar", logo: kantarLogo, size: "max-h-11 md:max-h-12" },
-  { name: "Emerald Research Group", logo: emeraldLogo, size: "max-h-14 md:max-h-16" },
+  { name: "Emerald Research Group", logo: emeraldLogo, size: "max-h-16 md:max-h-20" },
   { name: "Microsoft", logo: microsoftLogo },
   { name: "Google", logo: googleLogo },
   { name: "P&G", logo: pgLogo },
