@@ -101,13 +101,16 @@ const stats = [
   { value: "$1M+", label: "Agency revenue generated" },
 ];
 
+// `size` overrides the default max-h on a per-brand basis. Source logos
+// have different internal padding + weight, so we tune a few to feel
+// visually matched rather than mathematically identical.
 const trustedBy = [
-  { name: "Kantar", logo: kantarLogo },
-  { name: "Emerald Research Group", logo: emeraldLogo },
+  { name: "Kantar", logo: kantarLogo, size: "max-h-11 md:max-h-12" },
+  { name: "Emerald Research Group", logo: emeraldLogo, size: "max-h-14 md:max-h-16" },
   { name: "Microsoft", logo: microsoftLogo },
   { name: "Google", logo: googleLogo },
   { name: "P&G", logo: pgLogo },
-  { name: "Nestlé", logo: nestleLogo },
+  { name: "Nestlé", logo: nestleLogo, size: "max-h-7 md:max-h-8" },
 ];
 
 const UseCases = () => {
@@ -232,7 +235,7 @@ const UseCases = () => {
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className="max-h-9 md:max-h-10 w-auto max-w-[75%] object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert"
+                      className={`${brand.size ?? "max-h-9 md:max-h-10"} w-auto max-w-[75%] object-contain opacity-80 mix-blend-multiply dark:mix-blend-screen dark:invert`}
                     />
                   </div>
                 ))}
