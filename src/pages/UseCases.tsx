@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import microsoftLogo from "@/assets/logos/microsoft.png";
 import googleLogo from "@/assets/logos/google.png";
 import pgLogo from "@/assets/logos/pg.png";
-import canvaLogo from "@/assets/logos/canva.png";
+import nestleLogo from "@/assets/logos/nestle.svg";
 import emeraldLogo from "@/assets/logos/emerald.png";
 import kantarLogo from "@/assets/logos/kantar.png";
 
@@ -107,7 +107,7 @@ const trustedBy = [
   { name: "Microsoft", logo: microsoftLogo },
   { name: "Google", logo: googleLogo },
   { name: "P&G", logo: pgLogo },
-  { name: "Canva", logo: canvaLogo },
+  { name: "Nestlé", logo: nestleLogo },
 ];
 
 const UseCases = () => {
