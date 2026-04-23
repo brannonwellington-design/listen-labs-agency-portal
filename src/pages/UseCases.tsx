@@ -179,9 +179,11 @@ const UseCases = () => {
           hairline structure above stats for grid discipline */}
       <section className="py-32 bg-surface-inverse-primary">
         <div className="container">
-          <div className="flex items-baseline justify-between mb-16">
-            <p className="text-[12px] text-content-inverse-secondary">By the Numbers</p>
-            <p className="text-[12px] text-content-inverse-secondary">
+          <div className="mb-16 md:mb-20">
+            <h2 className="text-[40px] md:text-[56px] leading-[1.02] tracking-[-0.02em] text-content-inverse-primary mb-4">
+              By the Numbers.
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-content-inverse-secondary">
               Across the Listen agency network
             </p>
           </div>
