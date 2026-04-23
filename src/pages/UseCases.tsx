@@ -203,7 +203,7 @@ const UseCases = () => {
 
       {/* Trusted by , editorial split: display headline anchors the left,
           logo grid lives on the right, inside a structural rule frame */}
-      <section className="py-24 bg-surface-highlight">
+      <section className="py-24 bg-surface-primary">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div className="md:col-span-5">
