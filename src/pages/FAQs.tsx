@@ -43,10 +43,9 @@ const faqCategories = [
   {
     icon: Handshake,
     title: "Working with Clients",
-    subtitle: "How to present Listen to clients, what they see, and white-labeling.",
+    subtitle: "How to present Listen to clients and what they see.",
     faqs: [
       { q: "Can clients see the Listen platform?", a: "You choose. You can invite clients to your workspace with role-based permissions, or keep it behind the scenes and deliver only exports and reports." },
-      { q: "Is white-labeling available?", a: "Yes, the platform can be fully white-labeled. Clients only see your agency's branding and pricing." },
       { q: "What export formats are available?", a: "Export to PDF, PowerPoint, Excel, and video formats. All exports can be customized with your agency branding." },
       { q: "Can we create client-ready presentations?", a: "Yes, Listen automatically generates executive summaries and decks from your study results." },
       { q: "How do video highlights work?", a: "AI automatically identifies key moments and creates shareable video clips with quotes, organized by theme or sentiment. Users can also easily customize their own highlight reels based on themes coming out of the responses." },
